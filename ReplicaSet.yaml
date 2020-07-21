@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicasetteste
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: podteste
+  template:
+    metadata:
+      labels:
+        name: podteste
+    spec:
+      containers:
+      - name: drools
+        image: gvro/drools:1.0
+        ports:
+        - containerPort: 8080

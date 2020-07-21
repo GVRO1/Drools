@@ -1,0 +1,17 @@
+package hellodrools.Message
+
+dialect  "java"
+
+rule "Faturar"
+    when
+    pedido : com.example.demo.dto.PedidoDto (status == 1)
+    then
+    System.out.println(String.format("Faturar ordem: %s", pedido));
+end
+
+rule "Cancelar"
+    when
+    pedido : com.example.demo.dto.PedidoDto (status == 2)
+    then
+    System.out.println(String.format("Cancelar ordem: %s", pedido));
+end

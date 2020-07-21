@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podteste
+spec:
+  containers:
+  - name: drools
+    image: gvro/drools:1.0
+    ports:
+    - containerPort: 8080
